@@ -12,12 +12,12 @@
         </button>
       </div>
       <div class="flex flex-col w-full h-full gap-3 p-2 overflow-auto border-2 border-solid rounded shadow-md border-zinc-500">
-        <li *ngFor="let task of tasks; let i = index" class="flex items-center justify-between w-full gap-5 p-2 break-all list-none border-b-2 border-solid border-zinc-500">
-          <h1 class="text-lg w-52 md:w-3/4">
+        <li *ngFor="let task of tasks; let i = index" class="flex items-center justify-between w-full gap-3 p-2 break-all list-none border-b-2 border-solid border-zinc-500">
+          <h1 class="w-48 text-lg md:w-3/4">
             {{ task }}
           </h1>
           <div class="flex gap-3">
-            <button (click)="deleteTask(i)" class="h-12 px-4 text-white bg-red-500 rounded max-w-32">
+            <button (click)="deleteTask(i)" class="px-4 py-3 text-white bg-red-500 rounded max-w-36">
               Deletar tarefa
             </button>
           </div>
