@@ -1,23 +1,23 @@
-<div class="container mx-auto flex justify-between h-dvh bg-white rounded-lg shadow-lg ">
-  <div class="flex flex-col items-center w-full ">
-    <h1 class="text-5xl font-medium p-[70px]">
+<div class="container flex justify-center w-full mx-auto h-dvh">
+  <div class="flex flex-col items-center w-full">
+    <h1 class="py-16 text-4xl font-medium md:text-6xl">
       Minhas tarefas
     </h1>
-    <div class="w-3/4 flex flex-col gap-5">
-      <div class="flex gap-3">
+    <div class="flex flex-col w-full h-full gap-5 p-2">
+      <div class="flex flex-col gap-2 md:flex-row">
         <input type="text" [(ngModel)]="newTask" placeholder="digite uma tarefa"
-        class="border-2 border-solid border-zinc-500 rounded px-4 py-3 w-full outline-zinc-700 shadow-md placeholder:text-lg placeholder:text-zinc-400 focus:placeholder:text-zinc-700">
-        <button (click)="addTask()" class="text-lg px-4 py-3 bg-zinc-500 rounded shadow-md text-white border-2 border-solid border-zinc-500 w-1/6 hover:bg-zinc-600 active:bg-zinc-700 hover:border-zinc-600 transition-all duration-150">
+        class="w-full px-4 py-3 border-2 border-solid rounded shadow-md border-zinc-500 outline-zinc-700 placeholder:text-lg placeholder:text-zinc-400 focus:placeholder:text-zinc-700 h-14">
+        <button (click)="addTask()" class="w-full text-lg text-white transition-all duration-150 border-2 border-solid rounded shadow-md md:w-2/6 h-14 bg-zinc-500 border-zinc-500 hover:bg-zinc-600 active:bg-zinc-700 hover:border-zinc-600">
           Adicionar tarefa
         </button>
       </div>
-      <div class="w-full p-4 border-2 border-solid border-zinc-500 rounded flex flex-col gap-3">
-        <li *ngFor="let task of tasks; let i = index" class="list-none flex justify-between items-center">
-          <h1 class="text-lg">
+      <div class="flex flex-col w-full h-full gap-3 p-2 overflow-auto border-2 border-solid rounded shadow-md border-zinc-500">
+        <li *ngFor="let task of tasks; let i = index" class="flex items-center justify-between w-full gap-5 p-2 break-all list-none border-b-2 border-solid border-zinc-500">
+          <h1 class="text-lg w-52 md:w-3/4">
             {{ task }}
           </h1>
           <div class="flex gap-3">
-            <button (click)="deleteTask(i)" class="px-3 py-2 bg-red-500 text-white rounded">
+            <button (click)="deleteTask(i)" class="h-12 px-4 text-white bg-red-500 rounded max-w-32">
               Deletar tarefa
             </button>
           </div>

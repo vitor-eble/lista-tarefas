@@ -15,14 +15,14 @@ export class TarefasComponent implements OnInit{
   constructor(private tarefaService: TarefasService){ }
 
   ngOnInit(): void {
-      this.tasks = this.tarefaService.showTasks()
+    this.tasks = this.tarefaService.showTasks()
   }
 
   addTask(){
     if (this.newTask){
       this.tarefaService.addTask(this.newTask);
       this.newTask = '';
-     this.tasks = this.tarefaService.showTasks()
+      this.tasks = this.tarefaService.showTasks()
     }
   }
 
